@@ -9,6 +9,10 @@ import { Component } from '@angular/core';
       h3 {
         color: dodgerblue;
       }
+
+      .container {
+        margin-top: 50px;
+      }
     `,
   ],
 })
