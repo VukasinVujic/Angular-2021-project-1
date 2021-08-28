@@ -1,18 +1,24 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <!-- <ol>
+      <ol>
         <li>some text 1</li>
         <li>some text 2</li>
         <li>some text 3</li>
         <li>some text 4</li>
       </ol>
-      <p>laalalalal</p>
-      <p>laalalalal</p>
       <hr />
-      <app-warning-alert></app-warning-alert>
-      <app-success-alert></app-success-alert> -->
-      <app-servers></app-servers>
+      <label for="">User Name: </label>
+      <input type="text" class="form-control" [(ngModel)]="userName" />
+      <!-- <app-servers></app-servers> -->
+      <p>{{ userName }}</p>
+      <button
+        class="btn btn-primary"
+        [disabled]="userName === ''"
+        (click)="userName = ''"
+      >
+        Reset userName
+      </button>
     </div>
   </div>
 </div>
