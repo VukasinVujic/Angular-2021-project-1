@@ -1,13 +1,13 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <!-- <ol>
+      <ol>
         <li>some text 1</li>
         <li>some text 2</li>
         <li>some text 3</li>
         <li>some text 4</li>
       </ol>
-      <hr /> -->
+      <hr />
       <!-- <label for="">User Name: </label>
         <input type="text" class="form-control" [(ngModel)]="userName" />
         <p>{{ userName }}</p>
@@ -18,7 +18,23 @@
         >
         Reset userName
       </button> -->
-      <app-servers></app-servers>
+      <!-- <app-servers></app-servers> -->
+      <!-- <button class="btn btn-primary" (click)="showIt()">
+        Display details
+      </button> -->
+      <button class="btn btn-primary" (click)="onToggleDetails()">
+        Display details
+      </button>
+
+      <p *ngIf="showDetails">Secret Password = tuna</p>
+
+      <div
+        *ngFor="let element of log; let i = index"
+        [ngStyle]="{ backgroundColor: i >= 4 ? 'blue' : 'transparent' }"
+        [ngClass]="{ whiteColor: i >= 4 }"
+      >
+        {{ element }}
+      </div>
     </div>
   </div>
 </div>
